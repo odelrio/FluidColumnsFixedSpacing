@@ -1,0 +1,45 @@
+// out: ../css/style.css, compress: false
+
+@import "//necolas.github.io/normalize.css/3.0.2/normalize.css";
+
+.columnizer {
+    display: table;
+    width: 100%;
+    max-width: 1200px;
+    table-layout: fixed;
+    
+    & > .column {
+        display: table-cell;
+        min-width: 1px;
+        height: 400px;
+        text-align: center;
+    }
+    
+    & > .v-spacing {
+        display: table-cell;
+        width: 30px;
+    }
+}
+
+.columnizer.two {
+    & > .col1 {
+        width: 20%;
+    }
+    
+    & > .col2 {
+        width: 45%;
+    }
+}
+
+.columnizer.three {
+    & > .col3 {
+        width: 300px;
+    }
+}
+
+.columnizer.four {
+    & > .col1,
+    & > .col4 {
+        width: 200px;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fluid columns with fixed spacing</title>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            /*
+                This is just some beautifying CSS.
+                Refer to style.css/less for the magic.
+            */
+            header,
+            footer {
+                width: 100%;
+                height: 100px;
+                background-color: lightgray;
+                text-align: center;
+            }
+            
+            .pagewidth {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .columnizer {
+                margin: 30px auto;
+            }
+            
+            .columnizer .column {
+                background-color: aqua;
+            }
+            
+            .columnizer .v-spacing {
+                background-color: darkmagenta;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Header
+        </header>
+        <main class="pagewidth">
+            <div class="columnizer one">
+                <div class="column col1">Unset</div>
+                <div class="v-spacing"></div>
+                <div class="column col2">Unset</div>
+                <div class="v-spacing"></div>
+                <div class="column col3">Unset</div>
+            </div>
+            <div class="columnizer two">
+                <div class="column col1">Fluid 20%</div>
+                <div class="v-spacing"></div>
+                <div class="column col2">Fluid 45%</div>
+                <div class="v-spacing"></div>
+                <div class="column col3">Unset</div>
+            </div>
+            <div class="columnizer three">
+                <div class="column col1">Unset</div>
+                <div class="v-spacing"></div>
+                <div class="column col2">Unset</div>
+                <div class="v-spacing"></div>
+                <div class="column col3">Fixed 300px</div>
+            </div>
+            <div class="columnizer four">
+                <div class="column col1">Fixed 200px</div>
+                <div class="v-spacing"></div>
+                <div class="column col2">Unset</div>
+                <div class="v-spacing"></div>
+                <div class="column col3">Unset</div>
+                <div class="v-spacing"></div>
+                <div class="column col4">Fixed 200px</div>
+            </div>
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </body>
+</html>
